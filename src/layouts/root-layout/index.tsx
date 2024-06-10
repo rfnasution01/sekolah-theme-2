@@ -10,6 +10,7 @@ import {
 } from '@/store/slices/berandaAPI'
 import { RootFooter } from './footer'
 import { Link, Outlet } from 'react-router-dom'
+import { usePathname } from '@/libs/hooks/usePathname'
 
 export default function RootLayout() {
   const [isShow, setIsShow] = useState<boolean>(false)
@@ -70,9 +71,13 @@ export default function RootLayout() {
 
   const loadingIdentitas = isLoadingIdentitas || isFetchingIdentitas
 
+  const { firstPathname } = usePathname()
+
   return (
     <div className="flex h-screen flex-col bg-background text-[2rem] phones:text-[2.4rem]">
-      <div className="bg-primary-500 px-64 py-24 text-primary-100 phones:p-24">
+      <div
+        className={`${firstPathname === '' ? 'hidden' : 'block'} bg-primary-500 px-64 py-24 text-primary-100 phones:p-24`}
+      >
         <RootHeader
           setIsShow={setIsShow}
           isShow={isShow}
@@ -80,7 +85,9 @@ export default function RootLayout() {
           loading={loadingMenuTop}
         />
       </div>
-      <div className="phones:hidden">
+      <div
+        className={`${firstPathname === '' ? 'hidden' : 'block'} phones:hidden`}
+      >
         <RootNavigasi menuUtama={sortedDataUtama} loading={loadingMenuUtama} />
       </div>
       {isShow ? (
