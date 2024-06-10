@@ -2,11 +2,7 @@ import { useEffect, useState } from 'react'
 import { RootHeader } from './root-header'
 import { RootNavigasi } from './root-navigasi'
 import { MobileNavigasi } from './mobile-navigasi'
-import {
-  BeritaTerbaruType,
-  IdentitasType,
-  MenuType,
-} from '@/libs/types/beranda-type'
+import { IdentitasType, MenuType } from '@/libs/types/beranda-type'
 import {
   useGetIdentitasQuery,
   useGetMenuTopQuery,
@@ -20,7 +16,6 @@ export default function RootLayout() {
 
   // --- Menu Top ---
   const [menuTop, setMenuTop] = useState<MenuType[]>([])
-  const [beritaTerbaru, setBeritaTerbaru] = useState<BeritaTerbaruType[]>([])
   const {
     data: menuTopData,
     isLoading: isLoadingMenuTop,
@@ -32,7 +27,6 @@ export default function RootLayout() {
   useEffect(() => {
     if (menuTopData) {
       setMenuTop(menuTopData?.data)
-      setBeritaTerbaru(menuTopData?.berita_terbaru)
     }
   }, [menuTopData])
 
@@ -78,22 +72,16 @@ export default function RootLayout() {
 
   return (
     <div className="flex h-screen flex-col bg-background text-[2rem] phones:text-[2.4rem]">
-      <div className="bg-primary-500 p-24 text-primary-100">
+      <div className="bg-primary-500 px-64 py-24 text-primary-100 phones:p-24">
         <RootHeader
           setIsShow={setIsShow}
           isShow={isShow}
-          beritaTerbaru={beritaTerbaru}
           menuTop={sortedDataTop}
           loading={loadingMenuTop}
         />
       </div>
       <div className="phones:hidden">
-        <RootNavigasi
-          menuUtama={sortedDataUtama}
-          loading={loadingMenuUtama}
-          loadingIdentitas={loadingIdentitas}
-          identitas={identitas}
-        />
+        <RootNavigasi menuUtama={sortedDataUtama} loading={loadingMenuUtama} />
       </div>
       {isShow ? (
         <div className="flex-1">

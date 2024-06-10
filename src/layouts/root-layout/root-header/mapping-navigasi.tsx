@@ -32,7 +32,7 @@ export function NavigasiHeader({ menu }: { menu: MenuType[] }) {
                               : item?.slug
           }
           target={item?.jenis_menu === enumRoute.URL ? '_blank' : '_self'}
-          className="text-nowrap font-light text-success-100 hover:cursor-pointer hover:text-success-700"
+          className="text-nowrap font-light text-primary-100 hover:cursor-pointer hover:text-primary-700"
           key={idx}
         >
           {item?.nama_menu}

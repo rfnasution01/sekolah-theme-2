@@ -39,7 +39,7 @@ export function MappingNavigasi({
   }
 
   return (
-    <div className="flex items-center">
+    <div className="flex w-full items-center">
       {loading ? (
         <SingleSkeleton />
       ) : (
@@ -70,7 +70,7 @@ export function MappingNavigasi({
             }
             target={item?.jenis_menu === enumRoute.URL ? '_blank' : '_self'}
             className={clsx(
-              'border-l border-r border-primary-400 px-16 py-24 text-[2rem] uppercase hover:cursor-pointer hover:bg-primary-400 phones:text-[2.4rem]',
+              'px-16 py-24 text-[2rem] uppercase hover:cursor-pointer hover:bg-primary-400 phones:text-[2.4rem]',
               {
                 'bg-primary-400': isActivePage(item?.slug),
               },
