@@ -85,7 +85,7 @@ export default {
         primary: {
           DEFAULT: '#28A6F4',
           background: '#0891E6',
-          footer: '#050B32',
+          footer: '#4A0013',
           50: '#D9EDF7',
           100: '#F8D8C6',
           200: '#AFE6FF',
