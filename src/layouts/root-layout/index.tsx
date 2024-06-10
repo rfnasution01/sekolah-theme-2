@@ -76,7 +76,7 @@ export default function RootLayout() {
   return (
     <div className="flex h-screen flex-col bg-background text-[2rem] phones:text-[2.4rem]">
       <div
-        className={`${firstPathname === '' ? 'hidden' : 'block'} bg-primary-500 px-64 py-24 text-primary-100 phones:p-24`}
+        className={`${firstPathname === '' || firstPathname === 'profil' ? 'hidden' : 'block'} bg-primary-500 px-64 py-24 text-primary-100 phones:p-24`}
       >
         <RootHeader
           setIsShow={setIsShow}
@@ -86,7 +86,7 @@ export default function RootLayout() {
         />
       </div>
       <div
-        className={`${firstPathname === '' ? 'hidden' : 'block'} phones:hidden`}
+        className={`${firstPathname === '' || firstPathname === 'profil' ? 'hidden' : 'block'} phones:hidden`}
       >
         <RootNavigasi menuUtama={sortedDataUtama} loading={loadingMenuUtama} />
       </div>

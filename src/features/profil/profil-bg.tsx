@@ -31,7 +31,7 @@ export function ProfilBg({
                   loading="lazy"
                 />
               </div>
-              <div className="flex w-full flex-col gap-12 text-[2.4rem] text-primary-100 phones:text-[2.8rem]">
+              <div className="flex w-full flex-col gap-12 text-[2.4rem] text-white phones:text-[2.8rem]">
                 <TextComponent
                   label="Nama Sekolah"
                   value={profil?.nama ?? '-'}

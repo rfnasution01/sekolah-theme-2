@@ -8,10 +8,10 @@ export function ProfilTujuan({
   sekolah: string
 }) {
   return (
-    <div className="flex gap-32 px-64 phones:flex-col">
+    <div className="flex gap-24 px-64 phones:flex-col">
       <div className="flex h-full w-2/3 flex-col gap-12 phones:w-full">
-        <p className="font-roboto text-[3rem]">
-          {profil?.profil?.[2]?.jenis} {sekolah}
+        <p className="font-roboto text-[3rem] text-primary-500">
+          {profil?.profil?.[2]?.jenis} Pendidikan {sekolah}
         </p>
         <div className="flex flex-col gap-8">
           <p>{profil?.profil?.[2]?.keterangan}</p>

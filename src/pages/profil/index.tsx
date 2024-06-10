@@ -42,10 +42,10 @@ export default function ProfilPage() {
         <Loading />
       ) : (
         <div className="flex flex-col gap-32">
-          <div className="flex h-[85vh] w-full flex-col gap-32">
+          <div className="flex h-screen w-full flex-col gap-32">
             <ProfilBg
               profil={profil}
-              height="h-[85vh]"
+              height="h-screen"
               gambar="/img/identitas.png"
             />
           </div>
@@ -53,10 +53,10 @@ export default function ProfilPage() {
           <div className="  flex flex-col gap-32 px-64">
             <div className="flex flex-col gap-16">
               <p className="font-roboto text-[5rem]">
-                {profil?.profil?.[0]?.jenis} dan {profil?.profil?.[1]?.jenis}{' '}
+                {profil?.profil?.[2]?.jenis} dan {profil?.profil?.[3]?.jenis}{' '}
                 {identitas?.nama_website}
               </p>
-              <hr className="border-warning-500 w-[20rem] border" />
+              <hr className="w-[20rem] border border-warning-500" />
             </div>
           </div>
           <ProfilTujuan profil={profil} sekolah={identitas?.nama_website} />

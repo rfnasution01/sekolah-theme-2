@@ -18,8 +18,8 @@ export function ProfilSasaran({
         />
       </div>
       <div className="flex h-full w-2/3 flex-col gap-12 phones:w-full">
-        <p className="font-roboto text-[3rem]">
-          {profil?.profil?.[3]?.jenis} {sekolah}
+        <p className="font-roboto text-[3rem] text-primary-300">
+          {profil?.profil?.[3]?.jenis} Pendidikan {sekolah}
         </p>
         <div className="flex flex-col gap-8">
           <p>{profil?.profil?.[3]?.keterangan}</p>
