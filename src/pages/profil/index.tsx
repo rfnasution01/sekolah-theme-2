@@ -49,7 +49,16 @@ export default function ProfilPage() {
               gambar="/img/identitas.png"
             />
           </div>
-          <ProfilVisi profil={profil} />
+          <ProfilVisi profil={profil} sekolah={identitas?.nama_website} />
+          <div className="  flex flex-col gap-32 px-64">
+            <div className="flex flex-col gap-16">
+              <p className="font-roboto text-[5rem]">
+                {profil?.profil?.[0]?.jenis} dan {profil?.profil?.[1]?.jenis}{' '}
+                {identitas?.nama_website}
+              </p>
+              <hr className="border-warning-500 w-[20rem] border" />
+            </div>
+          </div>
           <ProfilTujuan profil={profil} sekolah={identitas?.nama_website} />
           <ProfilSasaran profil={profil} sekolah={identitas?.nama_website} />
           <ProfilHasil profil={profil} sekolah={identitas?.nama_website} />

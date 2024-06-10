@@ -91,7 +91,7 @@ export default {
           200: '#AFE6FF',
           300: '#7491D2',
           400: '#4963A4',
-          500: '#1B2F69',
+          500: '#800000',
           600: '#13235A',
           700: '#0D1A4B',
           800: '#08113C',
@@ -121,7 +121,11 @@ export default {
           tint: { 1: '#568500', 2: '#D6F9D5' },
           shade: { 1: '#2B4200' },
         },
-        warning: { DEFAULT: '#DD8D38', tint: { 1: '#F9EDD5', 2: '#fffbee' } },
+        warning: {
+          DEFAULT: '#DD8D38',
+          tint: { 1: '#F9EDD5', 2: '#fffbee' },
+          500: '#ADAD0D',
+        },
         danger: {
           DEFAULT: '#A01313',
           tint: { 1: '#F9D5D5', 2: '#FF6666', 3: '#990000', 4: '#db1514' },

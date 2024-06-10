@@ -18,7 +18,7 @@ export function ProfilSasaran({
         />
       </div>
       <div className="flex h-full w-2/3 flex-col gap-12 phones:w-full">
-        <p className="border-b-2 border-border pb-8 font-roboto text-[5rem]">
+        <p className="font-roboto text-[3rem]">
           {profil?.profil?.[3]?.jenis} {sekolah}
         </p>
         <div className="flex flex-col gap-8">
